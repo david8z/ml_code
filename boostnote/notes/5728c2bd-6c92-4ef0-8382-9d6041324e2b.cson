@@ -1,0 +1,47 @@
+createdAt: "2018-09-23T22:09:28.060Z"
+updatedAt: "2019-04-23T16:48:24.040Z"
+type: "MARKDOWN_NOTE"
+folder: "a6860d62829a85e2480c"
+title: "Cross-entropy"
+content: '''
+  # Cross-entropy
+  
+  ---
+  #### Entropy
+  The entropy measures the disorder in a dataset it helps us measure the uncertainity we have on an event happening.
+  
+  >$\\Large-\\sum_ip_i\\log_2(p_i)$.
+  
+  It shows you the average amount of information we get from our data telling you how unpredictable this probability distribution is.
+  
+  The negative sign before the sumatory  allow us to see a correlation between disorder and entropy indicating more disorder with higher entropy, so that we can execute later a minmization of the entropy function in order to minimize the disorder.
+  
+  <figure >
+      <img src="/home/david/Boostnote/media/neg_log.png" alt="Sigmoid graph" align="middle" />
+  </figure>
+  
+  #### Cross-entropy or negative likely-hood
+  Cross-entropy is one of the most widely used loss-functions in Deep learning for training classifiers.
+  
+  The cross entropy determines how close is the distribution generated to the real distribution. We must try to minimize it, the objective is that the probability inside the log is 100%, because log(1) == 0 that is our objective.
+  
+  >$\\Large-\\sum_ir_i\\log_2(p_i)$
+  
+  **r** is equal to real probabibility and **p** is equal to predicted.
+  <figure >
+      <img src="/home/david/Boostnote/media/cross_entropy.gif" alt="Sigmoid graph" align="middle" />
+  </figure>
+  
+  [Cross Entropy](https://www.desmos.com/calculator/zytm2sf56e)
+  
+  #### KL divergence or information gain
+  Cross entropy = entropy + KL divergence.
+  
+  KL divergence is the difference between cross entropy and entropy. Is also known as the information gain as it is the difference on the disorder of a data set after using a parameter in order to differentiate them. How much information does that parameter give us.
+  
+'''
+tags: [
+  "math_functions"
+]
+isStarred: false
+isTrashed: false

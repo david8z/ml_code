@@ -1,0 +1,51 @@
+createdAt: "2018-11-23T14:04:37.633Z"
+updatedAt: "2019-05-02T13:16:21.138Z"
+type: "MARKDOWN_NOTE"
+folder: "5a87a3fc610c0ba5d76a"
+title: "Machine Learning"
+content: '''
+  # Machine Learning
+  
+  ---
+  <figure style="display:block;margin-left=100px;">
+      <img src="/home/david/ml_code/boostnote/media/machine-learning.png" alt="ML graph" align="middle" />
+  </figure>
+  
+  ## SUPERVISED vs UNSUPERVISED
+  
+  #### Supervised
+  We have labeled data:
+  *Data =*$(x_1,y_y),...,(x_n, y_n)$ and we need to obtain a function that given x predicts the class it belongs to $f(x)=y$
+  
+  We can distinguish inside supervised learning:
+  - Classification: $y_i \\in {finite\\_set}$
+  - Regression: $y_i \\in \\mathbb{R}^d$
+  
+  #### Unsupervised
+  You are given the data points and you try to find patterns on the data.
+  *Data =*$(x^1,...x^n) 
+  \\rightarrow x^i \\in \\mathbb{R}^d$ d will represent the number of features representing the data.
+  
+  We can distinguish inside unsupervised learning:
+  - Clustering
+  - Density estimation
+  - Dimensionality reduction
+  
+  #### Variations
+  - *Semi-supervised learning* you have the class of the data for some training points and you have to predict the new classes for the ones that you don't have.
+  - *Active learning*
+  - *Decision theory* it matters how you make the errrors on some problems, for example if a person with cancer is predicted to not have cancer is worse than if a person with no cancer is predicted to have cancer.
+  - *Reinforcement learning* obtains rewards and loses associated with actions
+  
+  ## GENERATIVE VS DISCRIMINATIVE
+  
+  The difference between them is how they will separate points in a model.
+  
+  #### Discriminative
+  It will focus on the boundary that differentiate the different classes.
+  #### Generative
+  It will look for the distribtion function that describes teh differnt classes.
+'''
+tags: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,43 @@
+createdAt: "2019-04-23T09:20:21.384Z"
+updatedAt: "2019-04-23T16:20:05.233Z"
+type: "MARKDOWN_NOTE"
+folder: "db04685d0d2c0174685e"
+title: "Algebra"
+content: '''
+  # Algebra
+  
+  ---
+  Links:
+  - [PCA doc but used the mathematical background part](https://www.iro.umontreal.ca/~pift6080/H09/documents/papers/pca_tutorial.pdf)
+  
+  ----
+  
+  #### Eigenvectors
+  
+  The eigenvectors is a vector whose direction remains unchanged when a linear transformation is applied to it
+  - Eigenvectors can only be found on square matrices, but not every square matrix has eigenvectors.
+  - Given a $nxn$ matrix that does have eigenvectors we know there are $n$ of them.
+  - All the eigenvectors of a a matrix are perpendicular, no mater the dimensions (_orthogonal_).
+  - In order to keep eigenvectors standard we keep it's length to one
+  
+  Being $\\vec{v}$ the eigenvectors of Matrix $A$, we know that (being $lambda$ a scalar value, called the **eigenvalue**):
+  $A\\vec{v}=\\lambda\\vec{v}$
+  $A\\vec{v}-\\lambda\\vec{v} = 0$
+  $\\vec{v}(A-\\lambda I)=0$
+  So for a $2x2$ matrix $A$, that has eigenvectors we could see:
+  ```Python
+  import numpy as np
+  
+  eigenvalues, eigenvectors = np.linalg.eig(A)
+  
+  Print(np.dot(A, eigenvectors[:,0]) ==
+        eigenvalues[0]*eigenvectors[:,0])
+  # True
+  Print(np.dot(A, eigenvectors[:,1]) ==
+        eigenvalues[1]*eigenvectors[:,1])
+  #True
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,24 @@
+createdAt: "2019-06-07T10:50:40.132Z"
+updatedAt: "2019-06-07T11:48:25.182Z"
+type: "MARKDOWN_NOTE"
+folder: "ea5b0ca6c22bce85ffdf"
+title: "Bayes Classifier"
+content: '''
+  # Bayes Classifier
+  
+  A Bayes CLassifier is based on the Bayes theorem of probability:
+  
+  $$P(c|x) = \\dfrac{P(x|c)P(c)}{P(x)} = \\dfrac{P(x,c)}{P(x)}= \\dfrac{P(c,x)}{P(x)}$$
+  
+  $P(c)\\text{: is the pior probability of class c.}$
+  $P(x|c)\\text{: is the likelihood of x on class c.}$
+  
+  So what bayes classifier tries to do is to is to predict the probability of object x belonging to each of the differnt classes c.
+  
+  $$\\hat{c}(x)= \\mathop{\\operatorname{argmax}}\\limits_{c=1,..,C}P(c|x) = \\mathop{\\operatorname{argmax}}\\limits_{c=1,..,C}P(c)P(x|c)$$
+  
+  As we can see the second equation doesn't need the prior probability of $x$ as this will not affect the result of the $\\mathop{\\operatorname{argmax}}$, as will be the same for all the classes.
+'''
+tags: []
+isStarred: false
+isTrashed: false

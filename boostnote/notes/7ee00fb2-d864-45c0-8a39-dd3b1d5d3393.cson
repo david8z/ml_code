@@ -1,0 +1,30 @@
+createdAt: "2019-06-08T11:09:28.566Z"
+updatedAt: "2019-06-09T08:10:02.288Z"
+type: "MARKDOWN_NOTE"
+folder: "0afce7be60c8656be54d"
+title: "Voice representation"
+content: '''
+  # Voice representation
+  
+  ---
+  **Teorema de muestreo** para reconstruir una señal de ancho de banda $B$ la frecuencia de muestreo $F_m>2\\cdot B$.
+  
+  A la hora de representar la voz la representación temporal no es lo suficientemente discriminativa por ello se utiliza la representación frecuencial (**espectrograma**).
+  
+  ---
+  
+  #### Obtención de coeficientes ceptrales
+    1.  **Preénfasis**: Se aplica un **filtro de paso alto** a la señal $s(n)$ lo que provoca un equilibrado frecuencial. Se obtiene una señal resultante $x(n) = s(n) - \\alpha s(n-1)$, ( suele darse $\\alpha = 0.97$)
+    2.  **Ventana de Hamming**: $x(n)$ se transforma en una secuencia de subseñales:
+    $$x_i(n)=x(n+iS)h(n)$$
+    $$h(n)=0.54-0.46cos(\\dfrac{2\\pi (n-1)}{W-1})$$
+    $W:\\text{ anchura de la ventana.}$
+    $S:\\text{ desplazamiento de la ventana.}$
+  3. **Tranformada ráapida de Fourier (FFT)**: Paso a representación frecuencial por la transformada de Fourier. De $x_i(n)\\rightarrow X_i(l)$.
+  4. **Banco de filtros de Mel**: Se imita la percepción humana, las bajas frecuencias se ignoran (<64Hz), las altas se acumulan.
+  5. **Logaritmo**: Se reduce la sensibilidad a sonidos fuertes y débiles.
+  6. **Transformada discreta del coseno (DCT)**: Reduce la dimensión K aplicada en el filto de Mel a dimensión J=13, facilita el modelado y el reconocimiento.
+'''
+tags: []
+isStarred: false
+isTrashed: false

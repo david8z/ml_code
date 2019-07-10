@@ -1,0 +1,73 @@
+createdAt: "2018-12-13T07:40:09.922Z"
+updatedAt: "2019-04-23T16:41:39.173Z"
+type: "MARKDOWN_NOTE"
+folder: "72b3724e5d7a3fd576ca"
+title: "Markov-Models"
+content: '''
+  # Markov-Models
+  
+  ---
+  The future is independent of the past given the present.
+  
+  When we talk about markov model we talk about temporal data that goes as a sequence.
+  
+  ---
+  ## DATA
+  
+  The signals that we obtain from Real-World process can be:
+  - **Discrete**: Characters in an alphabet, not continuous data points.
+  - **Continuous**: Speech samples.
+  - **Stationary**: Statistical properties do not vary with time.
+  - **Non-stationary**: Statistical properties vary with time.
+  - **Pure or Corrupted**: With noise or without noise.
+  
+  ## Discrete Markov Processes
+  
+  Imagine a set of N distinct states ${S_1,S_2,..., S_N}$.
+  We will denote the actual state at time $t$ as $q_t$.
+  
+  In Markov Models to predict the actual state we will use the predecesor state. This means that state $q_t$ is conditionaly independent of all the previous state given the predecesor state. (This is nor all ways valid the state can also be dependent of more than one predecesor, our case is known as 1st order markov chain )
+  $a_{i,j}
+  \\rightarrow P[q_t = S_j| q_{t-1} =S_i,q_{t-2}=S_k,...]= P[q_t=S_j|q_{t-1} = S_i]$
+  
+  As they obay standard stochastic constraints:
+  $a_{i,j}\\geq0 \\&\\& \\sum\\limits_{j=1}^N(a_{i,j} = 1)$
+  
+  
+  >Imagine the following three states:
+  > - State 1: Rainy
+  > - State 2: Cloudy
+  > - State 3: Sunny
+  >
+  > We compute the following matrix A that describe the probabilties of the transitios between states for example $a_{1,3}==0.3$ will show the probability of being sunny knowing that the previous state was Rainy.
+  > $A = {a_{i,j}}=\\begin{bmatrix}0.4&0.3&0.3\\\\0.2&0.6&0.2\\\\0.1&0.1&0.8\\\\\\end{bmatrix}$
+  > Now we want to determine what is the probability of the sequence of states $O= {S_3,S_3,S_3,S_1,S_1,S_3,S_2,S_3}$ corresponding to $t=1,2,...,8$ occuring knowing that the state in t=1 is sunny $S_3$. This can be simplified in this way because we know in markov chains that state $q_t$ is conditionaly independent of all the previous state given the predecesor state.
+  > $P(O|Model)$
+  >$= P[S_3]\\cdot P[S_3|S_3]\\cdot P[S_3|S_3]\\cdot P[S_1|S_3]\\cdot P[S_1|S_1]\\cdot P[S_3|S_1]\\cdot P[S_2|S_3]\\cdot P[S_3|S_2]$
+  > $=\\pi_3\\cdot a_{3,3}\\cdot a_{3,3}\\cdot a_{3,1}\\cdot a_{1,1}\\cdot a_{1,3}\\cdot a_{3,2}\\cdot a_{2,3}$
+  >
+  ## Elements of an HMM
+  1. **N, number of states**, usuallly theya re inteconnected so that from any state we can reach to any other state. Denoted as ${S_1,S_2,..., S_N}$ and  the actual state at time $t$ as $q_t$.
+  2. **M, number of distinct observation symbols per state**, It depends in the case, denotes the posible output in hour example it would be 3 (rainy, cloudy or sunny). Denoted as  ${V_1,V_2,..., V_M}$
+  3. **A, the transition matrix**, shows the relation between different states. Denoted as $A = {a_{i,j}}$, the size of the matrix is equal to $NxN$ and it's values as they are probabilities are $\\in [0,1]$.
+  4. **Initial state distribution** $\\pi = {\\pi_i} \\in [0,1]$ Is the probability of a state of being the initial state It fullfills that $\\sum\\limits_{i=1}^N\\pi_i =1$.
+  5. **B, probability of emiting a specific symbol on a state**, its represented by a probabilty matrix of size $NxM$.
+  
+  To indicate the complete parameter set of an HMM model $\\lambda=(A,B,\\pi)$.
+  
+  ## Problems to solve of an HMM
+  1. **Problem 1 (Likelihood)**: The likelihood of a sequeence O occuring given a model.
+  2. **Problem 2 (Decoding)**: Obtain the hidden state sequence that best describes a observation sequence.
+  3. **Problem 3 (Learning)**: Obtain the $\\lambda$ parameters that best describe the model.
+  
+  ## Likelihood (Forward Algorithm)
+  The probability of a chain O of T observations occuring in a Markov Model is given by the sumatory of the probabilities of all the sequence of states that generate the whiling chain O.
+  The problem of this is that the cost of the algorithm used will be $N^T$ as for every element on the observations we have to evaluate which one of all the states is the correct state.
+  To prevent this we use the forward algorithm reducing it's cost to $N^2*T$.
+  ## Decoding (Viterbi Algorithm)
+  Decoding implies that we are given a sequence of observations and we have to determine from this observations what is the most likely sequence of states that will produce it
+  ## Learning (Forward-Backward Algorithm)
+'''
+tags: []
+isStarred: false
+isTrashed: false

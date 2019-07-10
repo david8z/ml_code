@@ -1,0 +1,23 @@
+createdAt: "2018-09-23T22:20:12.737Z"
+updatedAt: "2019-04-23T15:43:04.550Z"
+type: "MARKDOWN_NOTE"
+folder: "a6860d62829a85e2480c"
+title: "Softmax"
+content: '''
+  # Softmax
+  
+  ---
+  
+  It is used to normalize the data interpreting the input as unnormalized log probabilities (aka logits) and outputs normalized linear probabilities.
+  
+  
+  ---
+  The techinque of $softmax(x) = softmax(x+c)$ is used so that we reduce the values we introduce to the softmax so that we can compute the exponential of those values.
+  
+  
+'''
+tags: [
+  "math_functions"
+]
+isStarred: false
+isTrashed: false

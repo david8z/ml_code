@@ -1,0 +1,35 @@
+createdAt: "2019-04-19T14:55:49.926Z"
+updatedAt: "2019-04-25T14:23:59.786Z"
+type: "MARKDOWN_NOTE"
+folder: "db04685d0d2c0174685e"
+title: "Statistics"
+content: '''
+  # Statistics
+  ---
+  Links:
+  - [PCA doc but used the mathematical background part](https://www.iro.umontreal.ca/~pift6080/H09/documents/papers/pca_tutorial.pdf)
+  
+  ---
+  #### Mean (~)
+  Being $n$ the number of samples of the dataset $X$.
+    $\\widetilde{X} = \\dfrac{\\sum^n_{i=1}X_i}{n}$
+    #### The Mean Deviation (MD)
+  
+  $MD = \\dfrac{\\sum^n_{i=1}(X_i-\\widetilde{X})}{n}$
+  #### The Standard Deviation ($\\sigma$)
+  Measures the spread of the data, Higher $sigma$ implies that the data is more spread. It computes distance of all the points to the mean.
+  $\\sigma = \\sqrt{\\dfrac{\\sum^n_{i=1}(X_i-\\widetilde{X})^2}{n-1}}$
+  #### Variance ($\\sigma ^2$)
+  It's basically the same as the standard deviation
+  $\\sigma ^2 = \\dfrac{\\sum^n_{i=1}(X_i-\\widetilde{X})^2}{n-1}$
+  #### Covariance
+  It is useful to find out how much the dimesions vary from the mean with repect to each other. Is always measured between two dimensions. Positive values mean that both dimensions increase together, Negative implieas as one increses the other one decreases. If covariance is $0$ it means thet both dimensions are independent
+  $cov(X,Y) = \\dfrac{\\sum^n_{i=1}(X_i-\\widetilde{X})(Y_i-\\widetilde{Y})}{n-1}$
+  #### Covariance matrix
+  With n dimensional data you have $\\dfrac{n!}{(n-2)!*2}$ different covariance values. So we can calculate them all nd put them onto a matrix:
+  $C^{nxn} \\Rightarrow(C_{i,j} = cov(Dim_i,Dim_j))$
+  The diagonal of the covariance matrix is formed by the variances of the diferent dimensions. Also as $cov(a,b)= cov(b,a)$ we know that the matrix is symmetric respect to the diagonal.
+'''
+tags: []
+isStarred: false
+isTrashed: false

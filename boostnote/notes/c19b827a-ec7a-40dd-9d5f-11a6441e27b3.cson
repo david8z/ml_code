@@ -1,0 +1,43 @@
+createdAt: "2019-03-29T23:28:08.462Z"
+updatedAt: "2019-06-18T06:24:53.824Z"
+type: "MARKDOWN_NOTE"
+folder: "5a87a3fc610c0ba5d76a"
+title: "ML basics (1.5 Months)"
+content: '''
+  # ML basics (1.5 Months)
+  - [Machine Learning Andrew NG](https://www.coursera.org/learn/machine-learning)
+  - [GitHub - kaleko/CourseraML: I took Andrew Ng's Machine Learning course on Coursera and did the homework assigments... but, on my own in python because I love jupyter notebooks!](https://github.com/kaleko/CourseraML)
+  - [Learning from data](https://work.caltech.edu/telecourse.html)
+  # Specialized ML (2 Months)
+  - [Machine Learning, case study approach | Coursera](https://www.coursera.org/specializations/machine-learning)
+  - [numerical-linear-algebra/README.md at master · fastai/numerical-linear-algebra · GitHub](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md)
+  - [ML from fast.ai](http://course18.fast.ai/ml)
+  # Deep learning (3 Months)
+  - [Intro to TensorFlow for Deep Learning | Udacity](https://eu.udacity.com/course/intro-to-tensorflow-for-deep-learning--ud187)
+  - [Neural networks and deep learning](http://neuralnetworksanddeeplearning.com/)
+  - [Fast.ai part 1](https://course.fast.ai/)
+  - [Fast.ai part 2](http://course18.fast.ai/part2.html)
+  
+  # ML for trading (0.5 Months)
+  - [Machine Learning for Trading | Udacity](https://eu.udacity.com/course/machine-learning-for-trading--ud501)
+  
+  # Complex statistics (1.5 Months)
+  - [Introduction to Convex Optimization | Electrical Engineering and Computer Science | MIT OpenCourseWare](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-079-introduction-to-convex-optimization-fall-2009/)
+  - [Topics in Statistics: Statistical Learning Theory | Mathematics | MIT OpenCourseWare](https://ocw.mit.edu/courses/mathematics/18-465-topics-in-statistics-statistical-learning-theory-spring-2007/)
+  
+  ---
+  - Advent of code.
+  - NLP Stanford
+  - Dimensionality reduction techniques.
+  - Program detects numbers with neural networks.
+  - Reincforcment Learning
+  - Object detection
+  - [From Python to Numpy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+  - [GitHub - donnemartin/data-science-ipython-notebooks: Data science Python notebooks: Deep learning (TensorFlow, Theano, Caffe, Keras), scikit-learn, Kaggle, big data (Spark, Hadoop MapReduce, HDFS), matplotlib, pandas, NumPy, SciPy, Python essentials, AWS, and various command lines.](https://github.com/donnemartin/data-science-ipython-notebooks)
+  - [Category: Machine Learning - VideoLectures.NET](http://videolectures.net/Top/Computer_Science/Machine_Learning/#p=1)
+  - 
+'''
+tags: []
+isStarred: false
+isTrashed: false
+isPinned: true

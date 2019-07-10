@@ -1,0 +1,47 @@
+createdAt: "2019-04-25T14:03:55.028Z"
+updatedAt: "2019-05-02T15:21:20.508Z"
+type: "MARKDOWN_NOTE"
+folder: "dee6e41291c9b784bd27"
+title: "PCA"
+content: '''
+  # PCA
+  
+  ---
+  Links:
+  
+  - [PCA doc](https://www.iro.umontreal.ca/~pift6080/H09/documents/papers/pca_tutorial.pdf)
+  
+  ---                                            
+  Focuses more on feature classification compared to LDA.
+  
+  Steps of PCA:
+  
+  1. **Subtract the mean** from each of the data dimensions. This will generate dataset with a mean of 0.
+  2. **Calculate the covariance matrix** (see [Statistics](:note:e97890fe-2e45-4dac-ae01-f11f0885e2b3))
+  
+  $cov(X,Y) = \\dfrac{\\sum^n_{i=1}(X_i-\\widetilde{X})(Y_i-\\widetilde{Y})}{n-1}$
+  3. We calculate the **Eigenvectors** (important that the eigenvectors are normalized, length 1) and **Eigenvalues** from the covariance matrix (see [Algebra](:note:1712aef9-e0ea-4244-abcf-72cc3b0f6072)). This will allow us to extract lines/planes that characterise the data, the rest of the steps will imply transforming the data so that it is expresed on this lines/planes. The eigenvector with the highest eigenvalue is the principle component of the dataset, the higher is the eigenvalue the better that eigenvector describes the data.
+  4. Obtain the **Feature Vectors**, ordering eigenvectors from higher eigenvalues to lower and selecting the dimension we want to reduce it $n$ selecting the first $n$ eigenvectors.
+  5. We **derive the new data set**.
+  $NewData = FeatureVector^\\intercal * Data$
+  
+  ```Python
+  import numpy as np
+  
+  def pca(input_matrix, dim):
+      #Step 1
+      matrix_mean0 = input_matrix - np.mean(input_matrix,axis=0)
+      #Step 2
+      samples = matrix_mean0.shape[0]
+      covariance_matrix = 1 / ( samples - 1) * np.dot(np.transpose(matrix_mean0), matrix_mean0)
+      #Step 3
+      eigenvalues, eigenvectors = np.linalg.eig(covariance_matrix)
+      #Step 4, Each row will be an eigenvector in order
+      featureVectors = eigenvectors[:,np.argsort(eigenvalues)[::-1]]
+      return np.dot(np.transpose(featureVectors[:,:dim]),np.transpose(matrix_mean0))
+  ```
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

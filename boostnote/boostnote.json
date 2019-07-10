@@ -1,0 +1,60 @@
+{
+  "folders": [
+    {
+      "key": "5a87a3fc610c0ba5d76a",
+      "color": "#3FD941",
+      "name": "General"
+    },
+    {
+      "key": "db04685d0d2c0174685e",
+      "color": "#2BA5F7",
+      "name": "Maths"
+    },
+    {
+      "key": "dee6e41291c9b784bd27",
+      "color": "#8b572a",
+      "name": "Dimensionality Reduction"
+    },
+    {
+      "key": "b8e56f186b2ed2a7d2c5",
+      "color": "#E10051",
+      "name": "Clustering"
+    },
+    {
+      "key": "72b3724e5d7a3fd576ca",
+      "color": "#B013A4",
+      "name": "Models"
+    },
+    {
+      "key": "a6860d62829a85e2480c",
+      "color": "#f5a623",
+      "name": "Math Functions"
+    },
+    {
+      "key": "ec5301415597581c98fa",
+      "color": "#000000",
+      "name": "Regression"
+    },
+    {
+      "key": "ea5b0ca6c22bce85ffdf",
+      "color": "#f8e71c",
+      "name": "Classification"
+    },
+    {
+      "key": "f6525ea33847f326ffdf",
+      "color": "#9013fe",
+      "name": "Reinforcement Learning"
+    },
+    {
+      "key": "c5a46693ec910b5deb25",
+      "color": "#30D5C8",
+      "name": "Distributions"
+    },
+    {
+      "key": "0afce7be60c8656be54d",
+      "color": "#B013A4",
+      "name": "Data"
+    }
+  ],
+  "version": "1.0"
+}

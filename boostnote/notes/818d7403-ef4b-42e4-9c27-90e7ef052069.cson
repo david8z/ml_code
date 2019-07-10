@@ -1,0 +1,30 @@
+createdAt: "2018-11-15T10:13:08.116Z"
+updatedAt: "2019-06-07T10:49:45.438Z"
+type: "MARKDOWN_NOTE"
+folder: "ea5b0ca6c22bce85ffdf"
+title: "Perceptron"
+content: '''
+  # Perceptron
+  
+  ---
+  
+  #### OBJECTIVES
+  - Implement linear classifiers.
+  - Code the perceptron algorithm.
+  - Apply the perceptron algorithm.
+  
+  ---
+  
+  **Discriminant functions** measures to which extent an object x belongs to a class c. It basically finds a linear combination of features that characterizes or separates two or more classes
+  	- Linear classifier.
+  	- Dimensionality reduction.
+  
+  _It is similar to ANOVA, but ANOVA uses categorical independent variables and a continuous dependent variable while LDA, Linear Discriminant Functions, has continuous independent variables and a categorical dependent variable (class label)._
+  
+  $\\large g_c(x) = w^t_cx  	\\text{ where } \\begin{pmatrix}1\\\\x\\end{pmatrix} 	\\text{  and  } w_c=\\begin{pmatrix}w_{c0}\\\\w_c \\end{pmatrix}$
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

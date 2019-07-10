@@ -1,0 +1,26 @@
+createdAt: "2018-12-26T10:07:20.707Z"
+updatedAt: "2019-04-23T15:41:25.013Z"
+type: "MARKDOWN_NOTE"
+folder: "b8e56f186b2ed2a7d2c5"
+title: "K-Means"
+content: '''
+  # K-Means
+
+  Input:
+  - $k$: Number of clusters.
+  - $X=\{x_1,...,x_n\}$: Unlabled data points.
+
+  #### Algorithm (repeat until no modifications or x iterations):
+  1. We will place centroids $c_1,...,c_k$ in random locations.
+  2. We will assign each data point to it's nearest centroid (euclidean distance).
+  3. You recompute the centroid of the cluster with the help of all the points belonging to it, stablishing the new centroid as the mean of all the points in the cluster.
+
+  With random initialization is it posible that k-means algorithm reaches a local optima where it can't minimize more the distorion function but the data hasn't been correctly clustered. To prevent this happening the best option is to make various random initializations (usually we repeate it 50-1000 times). With a higher K is it less likely to find an incorrect local minima.
+  #### Choosing the number of clusters
+  The most common is to choose the number of cluster, K, by hand. Nevertheless there exists the elbow method. The problem with the elbow method is that there isn't all ways a clear elbow to choose.
+  #### Complexity
+  $O(iterations*cluster*instances*dimensions)$
+'''
+tags: []
+isStarred: false
+isTrashed: false

@@ -1,0 +1,19 @@
+createdAt: "2019-04-26T15:19:33.697Z"
+updatedAt: "2019-04-29T17:39:28.980Z"
+type: "MARKDOWN_NOTE"
+folder: "dee6e41291c9b784bd27"
+title: "LDA"
+content: '''
+  # LDA
+  ---
+  Links:
+  - [LINEAR DISCRIMINANT ANALYSIS - A BRIEF TUTORIAL](<https://www.music.mcgill.ca/~ich/classes/mumt611_07/classifiers/lda_theory.pdf>)
+  
+  --- 
+  
+  LDA propone encontrar una matriz de proyección W que separe las medias de cada clase
+  pero reduzca las matrices de covarianzas de cada clase
+'''
+tags: []
+isStarred: false
+isTrashed: false

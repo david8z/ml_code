@@ -1,0 +1,64 @@
+createdAt: "2018-09-26T13:41:38.868Z"
+updatedAt: "2019-04-23T16:36:35.145Z"
+type: "MARKDOWN_NOTE"
+folder: "72b3724e5d7a3fd576ca"
+title: "Word2Vec"
+content: '''
+  # Word2Vec
+  ---
+  
+  ## Gradient of the softmax loss function
+  
+  >$\\large Softmax(x)_i = \\dfrac{e^{x_i}}{\\sum_je^{x_j}}$
+  $\\large CrossEntropy(y,\\hat{y}) = - \\sum_iy_i\\log(\\hat{y}_i)$
+  
+  $y$ = Represent a one hot vector, the real prediction.
+  $hat{y}$ = Represent the predicted probability.
+  
+  >$\\large CE(y,\\hat{y}_i)=-\\sum_iy_i\\log(\\dfrac{e^{x_i}}{\\sum_je^{x_j}})$
+  
+  As y is a one hot vector there is only one element of the vector = 1 and the other elements are = 0. So we can diferentitae 2 cases.
+  - When $i$ is the position k of the vector where the value of $y_k =1$.
+  - The other case where the values of $y_i = 0$
+  
+  ### Case 1, i=k
+  As we know that this can only happend in one specific case we can remove the first summatory as we know that the only term with value of that summatory is $y_k=1$.
+  
+  >$\\large CE(y,\\hat{y}_i)= -\\log(\\dfrac{e^{x_k}}{\\sum_je^{x_j}}) = -(\\log(e^{x_k})- \\log(\\sum_je^{x_j}))$
+  
+  As the log and the exponential are inverse functions so they cancel out.
+  
+  >$\\large = -x_k+ \\log(\\sum_je^{x_j})$
+  
+  So know we can derivate on base of $x_k$ the remaining function knowing that $\\dfrac{\\partial}{\\partial x} \\log_a(f(x)) = \\dfrac{f'(x)}{f(x)\\ln(a)}$
+  
+  >$\\large \\dfrac{\\partial}{\\partial x_k}( -x_k+ \\log(\\sum_je^{x_j})) = -\\dfrac{\\partial}{\\partial x_k} x_k + \\dfrac{\\dfrac{\\partial}{\\partial x_k}\\sum_je^{x_j}}{\\sum_je^{x_j}}$
+  
+  We have to understand that the derivative of a summatory is equal to the derivative of all the terms of the summatory.
+  
+  > $\\large= - 1 + \\dfrac{\\dfrac{\\partial}{\\partial x_k}(e^{x_1}+e^{x_2}+ ...+e^{x_k}+...+e^{x_j})}{\\sum_je^{x_j}}$
+  
+  So the derivative for all the terms except $e^{x_k}$ will be equal to 0.
+  
+  > $\\large= - 1 + \\dfrac{e^{x_k}}{\\sum_je^{x_j}} = Softmax(x)_k - 1$
+  
+  So we can conclude that for i = k.
+  >$\\LARGE \\dfrac{\\partial}{\\partial x_i}CE(y,\\hat{y}_i) =\\hat{y_i}-1$
+  
+  ### Case 2, i $\\leq$ k
+  In the case 2 all the steps except for the final derivative are the same. When we try to  $\\dfrac{\\partial}{\\partial x_i}( -x_k)$  we derivate in base of an x different that $x_k$ so this derivative will be equal to 0. And the x of the sumatory selected will be i instead of k. This will give the following result.
+  
+  >$large dfrac{e^{x_i}}{sum_je^{x_j}} = Softmax(x)_i$
+  
+  So we can conclude that for i $\\leq$ k.
+  >$\\LARGE \\dfrac{\\partial}{\\partial x_i}CE(y,\\hat{y}_i) =\\hat{y_i}$
+  
+  ### Understanding the derivative
+  So now once we've obtained the result for both cases we see that the derivative of the loss function is equal to the predicted probability $\\hat{y_i}$ in all cases except for the case when $i==k$ where the result is $\\hat{y_i}-1$.
+  
+  So as we know that the vector $y$ is a one hot vector whith all the elements to 0 except the element at positoion $k$ that is equal to 1, we can combine both cases into one function that will represent the derivative of the loss function of the softmax.
+  >$\\Large \\dfrac{\\partial}{\\partial x_i}CE(y,\\hat{y}_i) =\\hat{y_i} - y$
+'''
+tags: []
+isStarred: false
+isTrashed: false

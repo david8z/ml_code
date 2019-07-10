@@ -1,0 +1,53 @@
+createdAt: "2019-06-07T12:00:42.340Z"
+updatedAt: "2019-06-08T11:02:43.460Z"
+type: "MARKDOWN_NOTE"
+folder: "0afce7be60c8656be54d"
+title: "Image representation"
+content: '''
+  # Image representation
+  ---
+  Ther are two very important aspects to take into account when representing images:
+  
+  **Sampling** specifies de domain, _resolution_ = $\\dfrac{pixels}{inch}$.
+  **Quantification** specifies the range levels of grey or colors,   $\\dfrac{bits}{pixel}$.
+  
+  ---
+  
+  #### Nyquist Frequency
+  
+  Stablishs the minimum resolution to be used in order to represent an image truthfully. Being $F$ the resolution and $P$ the minimum periodicity of an image, is the smallest distance in $\\frac{pixels}{inch}$ between periodical elements on an image. 
+  
+  $$F>2P$$
+  
+  ---
+  #### OCR Image preprocess
+  
+  <figure style="display:block;margin-left=100px;">
+      <img src="/home/david/Pictures/Screenshot from 2019-06-08 12-19-12.png" alt="OCR preprocess" align="middle" />
+  </figure>
+  
+  DADOD $n$ píxeles y $l$ níveles de gris:
+  - **Representación directa PCR** Normalización a un tamaño vertical $I\\times J$, Vector de características $I \\times J$ cuyas componentes indican el nivel de gris en cada píxel.
+  
+  $$n[\\dfrac{log_2(l}{)8}]\\text{ bytes}$$
+  - **Representación por histograma OCR**, un vector de tamaño $l$ siendo $l$ igual al nivel de grises máximo, donde la componente i-esima indíca la cantidad de bits con nivel de gris i.
+  $$l[\\dfrac{log_2(n+1)}{8}]\\text{ bytes}$$
+  
+  ---
+  #### Extracción de características métodos locales
+  Se seleccionan ventanas de la imagen que sean informativas, por ejemplo ventanas con alta varianza en niveles de grises. De esta forma un objeto pasaa representarse por $n$ Características Locales (CL).
+  
+  Los **puntos de ínteres** son aquellos píxeles de los cuales extraemos los CL:
+  - **Basados en información e invarianza**
+    - Detetctores de contorno, los puntos de interes son aquellos que tienen una alta varianza
+    - Detectores de esquinas, más restrictivo que el detector de contornos
+  - **Basados en exploración espacial**
+    - Extracción por rejilla
+      - Número de puntos de ínteres, $n = \\dfrac{vertical-ventana+1}{desplacamiento\\ vertical}\\cdot \\dfrac{horizontal-ventana+1}{desplacamiento\\ horizontal}$
+    - Extracción aleatoria
+  
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

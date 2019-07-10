@@ -1,0 +1,30 @@
+createdAt: "2019-06-09T08:13:02.037Z"
+updatedAt: "2019-06-09T08:29:26.608Z"
+type: "MARKDOWN_NOTE"
+folder: "0afce7be60c8656be54d"
+title: "Text representation"
+content: '''
+  # Text representation
+  
+  **Token** secuencia de carácteres que constituyen una unidad semántica, se suele usar como alternativa palabras.
+  
+  - **Normalización** obtención de una forma canónica para tokens similares (minúsculas, elimina tildes...)
+  - **Stop words** se eliminan tokens cuya frecuencia supera cierto umbral.
+  - **Stemming** proceso heurístico que elimina la terminación de un token (Porter)
+  - **Lematización** análisis morfológico para eliminar la desinencia.
+  
+  ---
+  #### Bag-of-words
+  $V$ vocabulario de tokens de la colección de documentos D, cada documento viene representado mediante un vector de dimensión $|V|$.
+  - Binaria: 1 si la palabra está en el doc.
+  - Entera: Número de ocurrencias de la palbra en el doc.
+  El tamaño de un doc en representación entera siendo $l_d$ la longitud del documento.
+  $$|V|\\cdot [\\dfrac{log_2(l_d+1)}{8}]\\text{ bytes}$$
+  
+  El tamaño de una colección en representación entera siendo $l_{max}$ la longitud máximaa de un documento en la colección.
+  $$D\\cdot |V|\\cdot [\\dfrac{log_2(l_{max}+1)}{8}]\\text{ bytes}$$
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false

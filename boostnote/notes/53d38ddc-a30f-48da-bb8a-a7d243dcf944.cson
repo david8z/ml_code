@@ -1,0 +1,36 @@
+createdAt: "2018-09-19T09:56:34.697Z"
+updatedAt: "2019-04-23T16:47:39.290Z"
+type: "MARKDOWN_NOTE"
+folder: "a6860d62829a85e2480c"
+title: "Sigmoid"
+content: '''
+  # Sigmoid
+  
+  ---
+  The sigmoid allows us puting any set of values onto a distribution between 0 and 1.
+  
+  ---
+  
+  <figure style="display:block;margin-left=100px;">
+      <img src="homedavidBoostnotemediasigmoid.png" alt="Sigmoid graph" align="middle" >
+  <igure>
+  
+  >$\\huge\\sigma = \\dfrac{1}{1+e^{-x}}$
+  
+  ---
+  $\\large  \\dfrac{g(t)}{h(t)} = \\dfrac{g'(t)h(t)- g(t)h'(t)}{h^2(t)}$
+  
+  >$\\Large\\sigma' = \\dfrac{[0*(1+e^{-x}])-[1*(-e^{-x})]}{(1+e^{-x})^2} = \\dfrac{e^{-x}}{(1+e^{-x})^2}$
+  
+  We can add and substract one to the numerator, this doesn't modify the value of the fraction.
+  
+  >$\\Large \\rightarrow\\sigma'= \\dfrac{e^{-x}+1-1}{(1+e^{-x})^2} = \\dfrac{1+e^{-x}}{(1+e^{-x})^2}-\\dfrac{1}{(1+e^{-x})^2} =\\dfrac{1}{(1+e^{-x})}-\\bigg[\\dfrac{1}{(1+e^{-x})}*\\dfrac{1}{(1+e^{-x})}\\bigg] = \\dfrac{1}{(1+e^{-x})}*\\bigg[1-\\dfrac{1}{(1+e^{-x})}\\bigg]$
+  
+  ---
+  >$\\huge\\sigma'=\\sigma*[1-\\sigma]$
+'''
+tags: [
+  "math_functions"
+]
+isStarred: false
+isTrashed: false
